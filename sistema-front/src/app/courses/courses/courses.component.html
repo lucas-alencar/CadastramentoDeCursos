@@ -21,7 +21,17 @@
           {{ course.category }}
           <mat-icon aria-hidden="false" aria-label="Categoria do curso">{{course.category | category}}</mat-icon>
         </td>
+      </ng-container>
 
+      <!-- Action Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef>
+          <button mat-raised-button color="primary">Adicionar</button>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let course">
+          <button mat-raised-button color="raised">Editar</button>
+          <button mat-raised-button color="warn">Remover</button>
+        </mat-cell>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
