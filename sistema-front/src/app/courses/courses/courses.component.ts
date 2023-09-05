@@ -27,4 +27,7 @@ export class CoursesComponent {
       data: errorMsg,
     });
   }
+  onAdd(){
+    console.log("onAdd");
+  }
 }
